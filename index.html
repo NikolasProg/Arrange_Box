@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Arrange Box</title>
+</head>
+
+<body>
+    <script src="main.js"></script>
+    <script>
+         var items = ['Молоко', 'Рыба', 'Селёдка', 'Творог', 'Сыр'];
+         let box=new ArrangeBox(items);
+         var buttonChangeList=document.createElement("button");
+        var newItems = ['Молоко111', 'Рыба111', 'Селёдка111', 'Творог11', 'Сыр111'];
+        buttonChangeList.setAttribute('id','changeList');
+        buttonChangeList.textContent="Change List";
+        document.body.appendChild(buttonChangeList);
+        document.getElementById("changeList").onclick=function(){
+            box.changeElementsList(newItems);
+        }
+    </script>
+</body>
+</html>

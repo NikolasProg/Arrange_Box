@@ -1,0 +1,198 @@
+:root {
+    --main-bg-color: rgb(54, 181, 255);
+    --main-bg-hover-color: rgb(6, 164, 255);
+    --main-bg-focus-color: #abc5fd;
+    --main-brd-color: #dee2e6;
+  }
+
+html {
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* LAYOUT */
+.arrange-box{
+    padding: 0.5rem;
+    border: 1px solid var(--main-brd-color);
+}
+
+.arrange-box .data{
+    display: flex;
+    padding: 1rem 0;
+}
+
+.arrange-box .control{
+    max-width: 15rem;
+}
+
+.arrange-box .items-container{
+    border-radius: 0.2rem;
+    flex: 1 1;
+    border: 1px solid var(--main-brd-color);
+}
+
+.arrange-box .buttons-container{
+    /* border: 1px solid black; */
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.2rem;
+}
+
+.arrange-box .buttons-container1{
+    /* border: 1px solid black; */
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.2rem;
+}
+
+.arrange-box .buttons-container2{
+    /* border: 1px solid black; */
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.2rem;
+}
+
+.arrange-box .buttons-container3{
+    /* border: 1px solid black; */
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.2rem;
+}
+
+/* ITEMS-CONTAINER */
+
+.items-container header{
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    background-color: rgb(242, 242, 242);
+}
+
+.items-container .filter{
+    padding: 0.5rem;
+}
+
+.items-container .list{
+    height: 15rem;
+    overflow: auto;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ITEMS-CONTAINER | LI*/
+
+.items-container .list li{
+    display: block;
+    /* height: 30px; */
+    border-top: 1px solid var(--main-brd-color);
+    padding: 1rem;
+    transition: background-color 0.2s;
+}
+
+.items-container .list li:hover{
+    background-color: var(--main-brd-color);
+}
+
+.items-container .list li.active{
+    background-color: var(--main-bg-color);
+}
+
+/* ITEMS-CONTAINER | INPUT*/
+
+.items-container .filter input{
+    border-radius: 0.1rem;
+    width: 100%;
+    border: 1px solid var(--main-brd-color);
+    padding: 0.5rem;
+}
+
+.items-container .filter input:hover{
+    border-color: var(--main-bg-color);
+    transition: border-color 0.2s;
+}
+.items-container .filter input:focus{
+    border-color: var(--main-bg-color);
+    outline: 0 none;
+    box-shadow: 0 0 0 2px var(--main-bg-focus-color);
+}
+
+
+/* ITEMS-CONTAINER | SELECT */
+
+.items-container .list {
+    height: 15rem;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.items-container select {
+    width: 100%; /* Занимает всю доступную ширину */
+    border-radius: 0.1rem;
+    border: 1px solid var(--main-brd-color);
+    padding: 0.5rem;
+}
+
+.items-container select:hover {
+    border-color: var(--main-bg-color);
+    transition: border-color 0.2s;
+}
+
+.items-container select:focus {
+    border-color: var(--main-bg-color);
+    outline: 0 none;
+    box-shadow: 0 0 0 2px var(--main-bg-focus-color);
+}
+
+/* ITEMS-CONTAINER | OPTION */
+
+.items-container select option {
+    display: block;
+    border-top: 1px solid var(--main-brd-color);
+    padding: 1rem;
+    transition: background-color 0.2s;
+}
+
+.items-container select option:hover {
+    background-color: var(--main-brd-color);
+}
+
+.items-container select option.active {
+    background-color: var(--main-bg-color);
+}
+
+
+/* BUTTONS */
+
+.arrange-box button {
+    min-width: 2rem;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+    background-color: var(--main-bg-color);
+    border: 0;
+    border-radius: 0.2rem;
+    transition: background-color 0.2s;
+}
+.arrange-box button:hover{
+    background-color: var(--main-bg-hover-color);
+}
+.arrange-box button:focus{
+    box-shadow: 0 0 0 2px var(--main-bg-focus-color);
+    
+}
